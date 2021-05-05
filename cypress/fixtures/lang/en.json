@@ -1,0 +1,9 @@
+{
+    "mainPageTitle" : "Test Form",
+    "uploadTitle" : "Drag and drop files here",
+    "maxSize" : "Max. file size",
+    "browseBtn" : "Browse Files",
+    "nextBtn" : "Next",
+    "prevBtn" : "Previous"
+    
+}
