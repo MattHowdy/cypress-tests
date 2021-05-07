@@ -15,7 +15,6 @@ Cypress.Commands.add('getNextBtn', (index=0, be='be.visible')=>{
         .find('.forNext')
         .eq(index)
         .contains(enContent.nextBtn)
-        // .invoke('css', 'display')
         .should(be)
 })
 

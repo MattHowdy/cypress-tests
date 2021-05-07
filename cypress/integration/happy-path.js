@@ -36,6 +36,8 @@ describe('happy path', ()=>{
 
 
     it('loads file upload and clicks on next ', () => {
+        const fileName = 'test.png'
+
        cy.getByClass('jfUpload-container')
             .contains(enContent.uploadTitle)
 
@@ -44,23 +46,34 @@ describe('happy path', ()=>{
 
        cy.getByClass('jfUpload-button')
             .contains(enContent.browseBtn)
+            .click()
 
-        
-        // TODO:
-        // upload content
+        cy.get('#input_9').attachFile(`images/${fileName}`);
+
+        cy.getByClass('qq-upload-list')
+            .children()
+            .its('length')
+            .should('be.eq', 1)
+
+        cy.get(`[actual-filename="${fileName}"]`)
+            .should('be.visible')
 
         cy.getPrevBtn(UPLOAD_FILE_PAGE)
         cy.getNextBtn(UPLOAD_FILE_PAGE).click()
     } )
 
+
     it('loads signature page, draws, and clicks on next', () => {
        
-        cy.get('[data-component=signature]')
-            .trigger('mousemove', { x: 150, y: 200 })
-            .trigger('mousedown')
-            .trigger('mousemove', { x: 101, y: 201 })
-            .trigger('mousemove', { x: 101, y: 201 })
-            .trigger('mouseup')
+        cy.getById('signature_pad_7')
+            .trigger('pointerdown', {
+                x: 250, 
+                y: 100,
+                isPrimary: true,
+            })
+            .trigger('pointermove', { x: 280, y: 120 })
+            .trigger('pointerup', { x: 260, y: 130 })
+        
     } )
 
     it('loads date page, includes date, and clicks on next', () => {
