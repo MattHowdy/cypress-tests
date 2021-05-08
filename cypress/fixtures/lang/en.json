@@ -1,9 +1,15 @@
 {
     "mainPageTitle" : "Test Form",
     "uploadTitle" : "Drag and drop files here",
+    "name" : "Name",
     "maxSize" : "Max. file size",
     "browseBtn" : "Browse Files",
+    "signature" : "Signature",
+    "securityQuestion" : "Security Question",
+    "thankYou" : "Thank You!",
     "nextBtn" : "Next",
-    "prevBtn" : "Previous"
+    "prevBtn" : "Previous",
+    "submitBtn" : "Submit",
+    "date" : "Date"
     
 }

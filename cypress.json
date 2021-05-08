@@ -1,3 +1,4 @@
 {
-    "baseUrl" : "https://www.jotform.com/210137027408345"
+    "baseUrl" : "https://www.jotform.com/210137027408345",
+    "chromeWebSecurity" : false
 }
