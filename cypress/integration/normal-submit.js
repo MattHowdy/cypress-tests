@@ -1,6 +1,6 @@
 const { DATE_SELECTOR_PAGE, NAME_FORM_PAGE, UPLOAD_FILE_PAGE, SIGNATURE_PAGE, SELECT_QUESTION_PAGE } = require('../fixtures/constants')
 
-describe('happy path', ()=>{
+describe('normal submit', ()=>{
     const enContent = require('../fixtures/lang/en.json')
     const { user} = require('../fixtures/data/user')
     
